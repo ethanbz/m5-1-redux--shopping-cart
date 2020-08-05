@@ -5,23 +5,29 @@ import Logo from './Logo';
 import ItemGrid from './ItemGrid';
 import GlobalStyles from './GlobalStyles';
 
+import Cart from './Cart'
+
 const App = () => {
-  return (
+  return (<>
+    <Cart />
     <Wrapper>
       <Header>
         <Logo />
       </Header>
+      
       <ItemGridWrapper>
         <ItemGrid />
       </ItemGridWrapper>
 
       <GlobalStyles />
     </Wrapper>
-  );
+  </>);
 };
 
 const Wrapper = styled.div`
   position: relative;
+  border-right: 3px dashed red;
+  margin-right: 322px;
 `;
 
 const Header = styled.header`
@@ -32,6 +38,7 @@ const Header = styled.header`
 const ItemGridWrapper = styled.main`
   grid-area: main;
   padding: 16px 64px;
+  
 `;
 
 const CartWrapper = styled.div`
